@@ -13,7 +13,7 @@ interface VideoGridProps {
 }
 
 export default function VideoGrid({ videos }: VideoGridProps) {
-  const [loadedVideos, setLoadedVideos] = useState<{ [key: number]: boolean }>({});
+  const [loadedVideos, setLoadedVideos] = useState<Record<number, boolean>>({});
 
   const handleIframeLoad = (index: number) => {
     setLoadedVideos(prev => ({ ...prev, [index]: true }));
