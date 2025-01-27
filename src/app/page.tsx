@@ -1,7 +1,8 @@
 'use client';
 
-import { IconBrandInstagram, IconBrandX, IconBrandYoutubeFilled, IconMailFilled, IconChevronDown } from "@tabler/icons-react";
+import { IconChevronDown } from "@tabler/icons-react";
 import SocialMediaLinks from "./_components/SocialMediaLinks";
+import Image from 'next/image'
 
 export default function HomePage() {
   const scrollToNextSection = () => {
@@ -77,7 +78,7 @@ export default function HomePage() {
 
         {/* Content */}
         <div className="relative flex h-full min-h-[80vh] flex-col items-center justify-center text-center pt-16">
-          <h1 className="mb-12 text-6xl font-bold tracking-tight">Hey I'm Miizu</h1>
+          <h1 className="mb-12 text-6xl font-bold tracking-tight">Hey I&apos;m Miizu</h1>
           <p className="mb-12 text-xl text-gray-200">wanna see something cool?</p>
           <SocialMediaLinks />
           <div className="absolute bottom-20 left-0 right-0 mx-auto text-xl font-semibold text-gray-400 
@@ -96,9 +97,11 @@ export default function HomePage() {
             <h2 className="mb-8 text-3xl font-semibold"></h2>
             <div className="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
               <a href="/animations" className="group relative overflow-hidden rounded-xl transform hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300" style={{ aspectRatio: '1381/1080' }}>
-                <img 
+                <Image 
                   src="/images/animations.png" 
                   alt="Animations"
+                  width={1381}
+                  height={1080}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/40 transition-colors duration-300">
@@ -107,9 +110,11 @@ export default function HomePage() {
               </a>
 
               <a href="/vfx" className="group relative overflow-hidden rounded-xl transform hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300" style={{ aspectRatio: '1381/1080' }}>
-                <img 
+                <Image 
                   src="/images/vfx.png" 
                   alt="VFX"
+                  width={1381}
+                  height={1080}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/40 transition-colors duration-300">
@@ -118,9 +123,11 @@ export default function HomePage() {
               </a>
 
               <a href="/thumbnails" className="group relative overflow-hidden rounded-xl transform hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300" style={{ aspectRatio: '1381/1080' }}>
-                <img 
+                <Image 
                   src="/images/thumbnails.png" 
                   alt="Thumbnails"
+                  width={1381}
+                  height={1080}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/40 transition-colors duration-300">
@@ -129,9 +136,11 @@ export default function HomePage() {
               </a>
 
               <a href="/commissions" className="group relative overflow-hidden rounded-xl transform hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300" style={{ aspectRatio: '1381/1080' }}>
-                <img 
+                <Image 
                   src="/images/commissions.png" 
                   alt="Commissions" 
+                  width={1381}
+                  height={1080}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
                 />
                 <div className="absolute inset-0 bg-black/50 flex items-center justify-center group-hover:bg-black/40 transition-colors duration-300">
@@ -186,7 +195,7 @@ export default function HomePage() {
 
         {/* Contact Section */}
         <section className="text-center">
-          <h2 className="mb-4 text-3xl font-semibold">Let's Work Together</h2>
+          <h2 className="mb-4 text-3xl font-semibold">Let&apos;s Work Together</h2>
           <p className="mb-8 text-gray-400">Available for freelance projects and collaborations</p>
           <a
             href="mailto:contact@example.com"
