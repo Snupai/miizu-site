@@ -1,7 +1,5 @@
 'use client';
 
-import { useState } from 'react';
-
 export type Video = {
   src: string;
   title: string;
@@ -12,15 +10,7 @@ interface VideoGridProps {
   videos: Video[];
 }
 
-type PlayingVideos = Record<number, boolean>;
-
 export default function VideoGrid({ videos }: VideoGridProps) {
-  const [playingVideos, setPlayingVideos] = useState<PlayingVideos>({});
-
-  const handleVideoClick = (index: number) => {
-    setPlayingVideos(prev => ({ ...prev, [index]: true }));
-  };
-
   const renderVideo = (video: Video, index: number) => (
     <div className={`flex flex-col ${video.fullWidth ? 'md:col-span-2' : ''}`} key={index}>
       <div className="aspect-video rounded-xl overflow-hidden relative">
@@ -29,15 +19,10 @@ export default function VideoGrid({ videos }: VideoGridProps) {
           className="embed-content"
           src={video.src}
           frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
           style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
         />
-        {!playingVideos[index] && (
-          <div 
-            className="absolute inset-0 bg-transparent cursor-pointer"
-            onClick={() => handleVideoClick(index)}
-          />
-        )}
       </div>
       <p className="text-white text-center text-sm mt-2">{video.title}</p>
     </div>
@@ -48,4 +33,4 @@ export default function VideoGrid({ videos }: VideoGridProps) {
       {videos.map((video, index) => renderVideo(video, index))}
     </div>
   );
-} 
+}
