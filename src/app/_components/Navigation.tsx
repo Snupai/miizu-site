@@ -2,7 +2,7 @@
 
 import * as React from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Home, Menu, Search, X } from 'lucide-react'
+import { Home, Search, X } from 'lucide-react'
 import Link from 'next/link'
 import { useRouter, usePathname } from 'next/navigation'
 import { useEffect } from 'react'
@@ -78,19 +78,19 @@ export default function DynamicIsland() {
     }
   }
 
-  const handleKeyDown = (e: KeyboardEvent) => {
+  const handleKeyDown = React.useCallback((e: KeyboardEvent) => {
     if (e.key === 'Escape' && isExpanded) {
       setIsExpanded(false)
       setSearchQuery('')
     }
-  }
+  }, [isExpanded]);
 
   useEffect(() => {
     document.addEventListener('keydown', handleKeyDown)
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
     }
-  }, [isExpanded, handleKeyDown])
+  }, [handleKeyDown])
 
   // Calculate dynamic height based on content and screen size
   const getExpandedHeight = () => {
