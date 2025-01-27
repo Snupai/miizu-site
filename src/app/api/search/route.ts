@@ -2,7 +2,7 @@ import { NextResponse } from 'next/server';
 import { type NextRequest } from 'next/server';
 
 export async function GET(request: NextRequest) {
-  const searchQuery = request.nextUrl.searchParams.get('q')?.toLowerCase() || '';
+  const searchQuery = request.nextUrl.searchParams.get('q')?.toLowerCase() ?? '';
 
   const pages = [
     {
