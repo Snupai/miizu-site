@@ -12,8 +12,10 @@ interface VideoGridProps {
   videos: Video[];
 }
 
+type PlayingVideos = Record<number, boolean>;
+
 export default function VideoGrid({ videos }: VideoGridProps) {
-  const [playingVideos, setPlayingVideos] = useState<{ [key: number]: boolean }>({});
+  const [playingVideos, setPlayingVideos] = useState<PlayingVideos>({});
 
   const handleVideoClick = (index: number) => {
     setPlayingVideos(prev => ({ ...prev, [index]: true }));
