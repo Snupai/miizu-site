@@ -6,6 +6,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
+        sans: ['Titillium Web', ...fontFamily.sans],
         titillium: ['Titillium Web', 'serif'],
         signika: ['Signika Negative', 'sans-serif'],
       },
@@ -20,5 +21,7 @@ export default {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('tailwind-scrollbar')({ nocompatible: true }),
+  ],
 } satisfies Config;
