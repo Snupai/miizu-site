@@ -8,7 +8,7 @@ export default function CommissionsPage() {
         
         <div className="max-w-3xl mx-auto flex flex-col items-center">
           <section className="mb-16">
-            <h2 className="text-8xl font-bold mb-6 text-center">Let's work together!</h2>
+            <h2 className="text-8xl font-bold mb-6 text-center">Let&apos;s work together!</h2>
           </section>
 
           <section className="mb-16">
