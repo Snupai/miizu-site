@@ -1,6 +1,5 @@
 'use client'
 
-import { IconHeart } from '@tabler/icons-react'
 import SocialMediaLinks from './SocialMediaLinks'
 
 export default function Footer() {
