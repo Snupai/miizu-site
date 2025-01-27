@@ -1,6 +1,7 @@
 'use client';
 
-import VideoGrid, { Video } from "../_components/VideoGrid";
+import { type Video } from '../_components/VideoGrid';
+import VideoGrid from '../_components/VideoGrid';
 
 const videos: Video[] = [
   {
