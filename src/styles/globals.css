@@ -9,8 +9,13 @@
   font-family: 'Titillium Web', sans-serif !important;
 }
 
+/* Set dark color scheme by default */
+:root {
+  color-scheme: dark;
+}
+
 /* Ensure the font is applied to root elements */
-:root, 
+:root,
 html, 
 body {
   font-family: 'Titillium Web', sans-serif !important;
@@ -83,3 +88,13 @@ body {
     font-style: italic;
   }
 }
+
+/* Dark scrollbar styling */
+html {
+  @apply scrollbar scrollbar-thin scrollbar-thumb-gray-600/50 scrollbar-track-transparent hover:scrollbar-thumb-gray-500;
+}
+
+/* Optional: Make scrollbar slightly more visible on hover */
+html:hover {
+  @apply scrollbar-thumb-gray-500/70;
+} 
