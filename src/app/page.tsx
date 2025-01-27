@@ -3,6 +3,7 @@
 import { IconChevronDown } from "@tabler/icons-react";
 import SocialMediaLinks from "./_components/SocialMediaLinks";
 import Image from 'next/image'
+import * as React from "react";
 
 export default function HomePage() {
   const scrollToNextSection = () => {
@@ -150,60 +151,6 @@ export default function HomePage() {
             </div>
           </section>
         </div>
-      </div>
-
-      {/* Container for the rest of the content */}
-      <div className="container mx-auto px-4">
-        {/* Services Grid */}
-        <section className="mb-24">
-          <h2 className="mb-8 text-3xl font-semibold">Services</h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
-            <div className="rounded-2xl bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
-              <h3 className="mb-2 text-xl font-semibold">Video Editing</h3>
-              <p className="text-gray-400">Professional video editing with attention to pacing, storytelling, and visual impact.</p>
-            </div>
-            <div className="rounded-2xl bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
-              <h3 className="mb-2 text-xl font-semibold">Motion Design</h3>
-              <p className="text-gray-400">Creative motion graphics and visual effects that bring your content to life.</p>
-            </div>
-            <div className="rounded-2xl bg-white/5 p-6 backdrop-blur-sm transition hover:bg-white/10">
-              <h3 className="mb-2 text-xl font-semibold">3D Animation</h3>
-              <p className="text-gray-400">Stunning 3D animations and visualizations for any project needs.</p>
-            </div>
-          </div>
-        </section>
-
-        {/* Selected Projects */}
-        <section className="mb-24">
-          <h2 className="mb-8 text-3xl font-semibold">Selected Projects</h2>
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-            {[1, 2, 3, 4].map((project) => (
-              <div key={project} className="group relative aspect-video overflow-hidden rounded-2xl bg-gray-900">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  <p className="text-gray-500">Project {project}</p>
-                </div>
-                <div className="absolute inset-0 bg-black/50 opacity-0 transition group-hover:opacity-100">
-                  <div className="flex h-full flex-col items-center justify-center p-4 text-center">
-                    <h3 className="mb-2 text-xl font-semibold">Project Title</h3>
-                    <p className="text-sm text-gray-300">Brief project description</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-
-        {/* Contact Section */}
-        <section className="text-center">
-          <h2 className="mb-4 text-3xl font-semibold">Let&apos;s Work Together</h2>
-          <p className="mb-8 text-gray-400">Available for freelance projects and collaborations</p>
-          <a
-            href="mailto:contact@example.com"
-            className="inline-block rounded-full bg-white px-8 py-3 text-lg font-semibold text-black transition hover:bg-gray-200"
-          >
-            Get in Touch
-          </a>
-        </section>
       </div>
     </main>
   );
