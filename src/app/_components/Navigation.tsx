@@ -226,7 +226,7 @@ export default function DynamicIsland() {
               </motion.div>
 
               {/* Navigation Items - Add overflow container */}
-              <div className="overflow-y-auto flex-grow">
+              <div className="overflow-y-auto flex-grow scrollbar-thin scrollbar-thumb-gray-600 scrollbar-track-transparent hover:scrollbar-thumb-gray-500">
                 <AnimatePresence mode="wait">
                   {isLoading ? (
                     <motion.div
