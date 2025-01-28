@@ -9,7 +9,7 @@ const youtubeImages = [
     fullWidth: false
   },
   {
-    src: "/thumbnails/own-youtube/Index_Controller_Review.jpg", 
+    src: "/thumbnails/own-youtube/Index_controller_review.jpg", 
     title: "Thumbnail for my Index controller review / Youtube: Miizumelon",
     fullWidth: false
   },
