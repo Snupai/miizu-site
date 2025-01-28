@@ -187,31 +187,30 @@ function ImageGrid({ images, images_per_row}: {
     </div>
   );
 }
-
 export default function ThumbnailsPage() {
   return (
     <main className="min-h-screen bg-gradient-to-b from-[#000000] to-[#15162c] text-white pt-20 pb-32">
       <div className="container mx-auto px-4">
-        <h1 className="text-8xl font-bold mb-8 mt-16 text-center">Thumbnails</h1>
-        <p className="text-xl mb-16 text-center">Thumbnails i made either for myself or clients.</p>
+        <h1 className="text-4xl md:text-6xl lg:text-8xl font-bold mb-4 md:mb-8 mt-8 md:mt-16 text-center">Thumbnails</h1>
+        <p className="text-lg md:text-xl mb-8 md:mb-16 text-center">Thumbnails i made either for myself or clients.</p>
         
-        <div className="mb-16">
+        <div className="mb-8 md:mb-16">
           <ImageGrid images={youtubeImages} images_per_row={2} />
         </div>
 
-        <h2 className="text-6xl font-bold mb-8 mt-32 text-center">Commissioned</h2>
-        <div className="mb-16">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-8 mt-16 md:mt-32 text-center">Commissioned</h2>
+        <div className="mb-8 md:mb-16">
           <ImageGrid images={commissionedImages} images_per_row={2} />
         </div>
 
-        <h2 className="text-6xl font-bold mb-8 mt-32 text-center">Minecraft Thumbnails</h2>
-        <p className="text-xl mb-16 text-center">Skinrender and Wallpapers.</p>
-        <div className="mb-16">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-8 mt-16 md:mt-32 text-center">Minecraft Thumbnails</h2>
+        <p className="text-lg md:text-xl mb-8 md:mb-16 text-center">Skinrender and Wallpapers.</p>
+        <div className="mb-8 md:mb-16">
             <ImageGrid images={minecraftImages} images_per_row={2} />
         </div>
 
-        <h2 className="text-6xl font-bold mb-8 mt-32 text-center">Minecraft Cinema Wallpapers</h2>
-        <div className="mb-16">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-8 mt-16 md:mt-32 text-center">Minecraft Cinema Wallpapers</h2>
+        <div className="mb-8 md:mb-16">
             <ImageGrid images={minecraftCinemaWallpapers} images_per_row={3} />
         </div>
       </div>
