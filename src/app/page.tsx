@@ -49,27 +49,7 @@ export default function HomePage() {
             className="h-full w-full object-cover"
           >
             <source 
-              src="/videos/Cc3tLIvmX7U_720-5120w.mp4" 
-              media="(min-width: 2560px)"
-              type="video/mp4" 
-            />
-            <source 
-              src="/videos/Cc3tLIvmX7U_720-2560w.mp4" 
-              media="(min-width: 1920px)"
-              type="video/mp4" 
-            />
-            <source 
-              src="/videos/Cc3tLIvmX7U_720-1920w.mp4"
-              media="(min-width: 1280px)"
-              type="video/mp4"
-            />
-            <source 
-              src="/videos/Cc3tLIvmX7U_720-1280w.mp4"
-              media="(min-width: 640px)"
-              type="video/mp4"
-            />
-            <source 
-              src="/videos/Cc3tLIvmX7U_576-640w.mp4"
+              src="https://h8xit2v5n4.ufs.sh/f/j1TrUrDzTEZYK4AFykZdXxCW9yvRpw8bU4tDrcjHNoPBEKul"
               type="video/mp4"
             />
           </video>
