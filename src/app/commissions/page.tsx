@@ -25,7 +25,7 @@ export default function CommissionsPage() {
                 Contact me directly on Instagram
             </p>
             <div className="flex justify-center">
-                <button className="bg-white text-black px-4 py-2 rounded-full hover:bg-pink-200 transition-colors" onClick={() => window.open('https://www.instagram.com/miizumelon/')}>Quick Contact</button>
+                <button aria-label="Quick Contact" className="bg-white text-black px-4 py-2 rounded-full hover:bg-pink-200 transition-colors" onClick={() => window.open('https://www.instagram.com/miizumelon/')}>Quick Contact</button>
             </div>
           </section>
         </div>
