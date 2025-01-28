@@ -2,6 +2,7 @@ import "@/styles/globals.css";
 import { type Metadata } from "next";
 import Navigation from "./_components/Navigation";
 import Footer from "./_components/Footer";
+import CookieConsent from "./_components/CookieConsent";
 
 export const metadata: Metadata = {
   title: "Hey Miizu! | Portfolio",
@@ -20,6 +21,7 @@ export default function RootLayout({
         <Navigation />
         {children}
         <Footer />
+        <CookieConsent />
       </body>
     </html>
   );
