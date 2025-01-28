@@ -41,18 +41,20 @@ export default function HomePage() {
       <div className="relative h-screen">
           {/* Video Background */}
         <div className="absolute inset-0 overflow-hidden">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="h-full w-full object-cover"
-          >
-            <source 
-              src="https://h8xit2v5n4.ufs.sh/f/j1TrUrDzTEZYK4AFykZdXxCW9yvRpw8bU4tDrcjHNoPBEKul"
-              type="video/mp4"
-            />
-          </video>
+          <div className="bg-gradient-to-b from-[#50038f] to-[#400377] h-full w-full">
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="h-full w-full object-cover"
+            >
+              <source 
+                src="https://h8xit2v5n4.ufs.sh/f/j1TrUrDzTEZYK4AFykZdXxCW9yvRpw8bU4tDrcjHNoPBEKul"
+                type="video/mp4"
+              />
+            </video>
+          </div>
           {/* Grey Overlay */}
           <div className="absolute inset-0 bg-gray-900/75"></div>
         </div>
