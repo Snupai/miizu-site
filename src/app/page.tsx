@@ -7,7 +7,7 @@ import * as React from "react";
 
 export default function HomePage() {
   const scrollToNextSection = () => {
-    const targetElement = document.getElementById('next-section');
+    const targetElement = document.getElementById('cards');
     if (!targetElement) return;
     
     const start = window.scrollY;
@@ -84,7 +84,7 @@ export default function HomePage() {
           <SocialMediaLinks />
           <div className="absolute bottom-32 left-0 right-0 mx-auto text-xl font-semibold text-gray-400 
               transition-colors duration-300 cursor-pointer titillium-web-semibold">
-            <button onClick={scrollToNextSection}>
+            <button name="scroll-down" onClick={scrollToNextSection}>
               <IconChevronDown className="h-20 w-20 transition-all duration-300 hover:animate-soft-bounce" />
             </button>
           </div>
@@ -92,7 +92,7 @@ export default function HomePage() {
       </div>
 
       {/* Reel Section */}
-      <div id="next-section" className="min-h-screen">
+      <div id="cards" className="min-h-screen">
         <div className="container mx-auto px-4 py-16 flex items-center justify-center min-h-screen">
           <section>
             <h2 className="mb-8 text-3xl font-semibold"></h2>
@@ -100,7 +100,7 @@ export default function HomePage() {
               <a href="/animations" className="group relative overflow-hidden rounded-xl transform hover:-translate-x-2 hover:-rotate-2 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300 ease-out" style={{ aspectRatio: '1381/1080' }}>
                 <Image 
                   src="/images/animations.png" 
-                  alt="Animations"
+                  alt="Beispiele meiner Animationsarbeiten"
                   width={1381}
                   height={1080}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
@@ -113,7 +113,7 @@ export default function HomePage() {
               <a href="/vfx" className="group relative overflow-hidden rounded-xl transform hover:translate-x-2 hover:rotate-2 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300 ease-out" style={{ aspectRatio: '1381/1080' }}>
                 <Image 
                   src="/images/vfx.png" 
-                  alt="VFX"
+                  alt="Visuelle Effekte und Compositing Arbeiten"
                   width={1381}
                   height={1080}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
@@ -126,7 +126,7 @@ export default function HomePage() {
               <a href="/thumbnails" className="group relative overflow-hidden rounded-xl transform hover:-translate-x-2 hover:-rotate-2 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300 ease-out" style={{ aspectRatio: '1381/1080' }}>
                 <Image 
                   src="/images/thumbnails.png" 
-                  alt="Thumbnails"
+                  alt="Galerie von YouTube Thumbnail Designs"
                   width={1381}
                   height={1080}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
@@ -139,7 +139,7 @@ export default function HomePage() {
               <a href="/commissions" className="group relative overflow-hidden rounded-xl transform hover:translate-x-2 hover:rotate-2 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300 ease-out" style={{ aspectRatio: '1381/1080' }}>
                 <Image 
                   src="/images/commissions.png" 
-                  alt="Commissions" 
+                  alt="Übersicht verfügbarer Auftragsdienste"
                   width={1381}
                   height={1080}
                   className="object-cover w-full h-full transition-transform duration-300 group-hover:scale-105"
