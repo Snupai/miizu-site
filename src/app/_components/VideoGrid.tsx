@@ -29,7 +29,6 @@ export default function VideoGrid({ videos }: VideoGridProps) {
         <ExternalContent
           src={video.src}
           title={`Video player ${index}`}
-          type="video"
           onLoad={() => handleIframeLoad(index)}
         />
       </div>

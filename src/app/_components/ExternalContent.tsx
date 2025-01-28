@@ -1,20 +1,17 @@
 import { useEffect, useState } from 'react';
-import { type CookieConsent, getCookieConsent } from './CookieConsent';
+import { getCookieConsent } from './CookieConsent';
 
 interface ExternalContentProps {
   src: string;
   title: string;
-  type: 'video';
   onLoad?: () => void;
 }
 
-export default function ExternalContent({ src, title, type, onLoad }: ExternalContentProps) {
-  const [consent, setConsent] = useState<CookieConsent | null>(null);
+export default function ExternalContent({ src, title, onLoad }: ExternalContentProps) {
   const [showPlaceholder, setShowPlaceholder] = useState(true);
 
   useEffect(() => {
     const savedConsent = getCookieConsent();
-    setConsent(savedConsent);
     if (savedConsent?.external) {
       setShowPlaceholder(false);
     }
