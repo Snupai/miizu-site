@@ -58,9 +58,10 @@ export default function CookieConsent() {
         <div className="flex-1">
           <h3 className="mb-2 text-lg font-semibold">Cookie Settings</h3>
           <p className="text-sm text-gray-300">
-            We use cookies to enhance your browsing experience and analyze our traffic. This includes
-            external content from Adobe and YouTube. By clicking &quot;Accept All&quot;, you consent to our use
-            of cookies. You can reject non-essential cookies by clicking &quot;Reject All&quot;.
+            We use cookies to enhance your browsing experience. This includes
+            external content from sources like Adobe. By clicking &quot;Accept All&quot;, you consent to our use
+            of cookies. You can reject all cookies by clicking &quot;Reject All&quot;. Note that this will disable
+            external content from sources like Adobe.
           </p>
         </div>
         <div className="flex flex-col gap-2 md:flex-row">
