@@ -82,7 +82,7 @@ export default function HomePage() {
           <h1 className="mb-12 text-6xl font-bold tracking-tight">Hey I&apos;m Miizu</h1>
           <p className="mb-12 text-xl text-gray-200">wanna see something cool?</p>
           <SocialMediaLinks />
-          <div className="absolute bottom-20 left-0 right-0 mx-auto text-xl font-semibold text-gray-400 
+          <div className="absolute bottom-32 left-0 right-0 mx-auto text-xl font-semibold text-gray-400 
               transition-colors duration-300 cursor-pointer titillium-web-semibold">
             <button onClick={scrollToNextSection}>
               <IconChevronDown className="h-20 w-20 transition-all duration-300 hover:animate-soft-bounce" />
