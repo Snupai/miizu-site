@@ -13,10 +13,10 @@ export default function CommissionsPage() {
 
           <section className="mb-16">
             <h2 className="text-3xl font-bold mb-6">What I Offer</h2>
-            <ul className="space-y-4 text-lg">  
-              <li>✦ Custom Thumbnails</li>
+            <ul className="space-y-4 text-lg">
               <li>✦ Animations</li>
               <li>✦ Video Editing</li>
+              <li>✦ SFX</li>
             </ul>
           </section>
 
