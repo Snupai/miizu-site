@@ -144,8 +144,15 @@ function ImageGrid({ images, images_per_row}: {
   const totalImages = images.length;
   const lastRowItems = totalImages % images_per_row;
   
+  // Create a mapping for grid columns
+  const gridColsClass = {
+    2: 'md:grid-cols-2',
+    3: 'md:grid-cols-3',
+    4: 'md:grid-cols-4',
+  }[images_per_row] || 'md:grid-cols-1';
+  
   return (
-    <div className={`grid grid-cols-1 md:grid-cols-${images_per_row} gap-6 max-w-7xl mx-auto`}>
+    <div className={`grid grid-cols-1 ${gridColsClass} gap-6 max-w-7xl mx-auto`}>
       {images.map((image, index) => {
         // Check if this item is in the last row and needs centering
         const isLastRow = index >= totalImages - lastRowItems;
