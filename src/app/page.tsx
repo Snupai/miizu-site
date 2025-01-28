@@ -97,7 +97,7 @@ export default function HomePage() {
           <section>
             <h2 className="mb-8 text-3xl font-semibold"></h2>
             <div className="grid grid-cols-2 gap-4 max-w-4xl mx-auto">
-              <a href="/animations" className="group relative overflow-hidden rounded-xl transform hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300" style={{ aspectRatio: '1381/1080' }}>
+              <a href="/animations" className="group relative overflow-hidden rounded-xl transform hover:-translate-x-2 hover:-rotate-2 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300 ease-out" style={{ aspectRatio: '1381/1080' }}>
                 <Image 
                   src="/images/animations.png" 
                   alt="Animations"
@@ -110,7 +110,7 @@ export default function HomePage() {
                 </div>
               </a>
 
-              <a href="/vfx" className="group relative overflow-hidden rounded-xl transform hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300" style={{ aspectRatio: '1381/1080' }}>
+              <a href="/vfx" className="group relative overflow-hidden rounded-xl transform hover:translate-x-2 hover:rotate-2 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300 ease-out" style={{ aspectRatio: '1381/1080' }}>
                 <Image 
                   src="/images/vfx.png" 
                   alt="VFX"
@@ -123,7 +123,7 @@ export default function HomePage() {
                 </div>
               </a>
 
-              <a href="/thumbnails" className="group relative overflow-hidden rounded-xl transform hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300" style={{ aspectRatio: '1381/1080' }}>
+              <a href="/thumbnails" className="group relative overflow-hidden rounded-xl transform hover:-translate-x-2 hover:-rotate-2 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300 ease-out" style={{ aspectRatio: '1381/1080' }}>
                 <Image 
                   src="/images/thumbnails.png" 
                   alt="Thumbnails"
@@ -136,7 +136,7 @@ export default function HomePage() {
                 </div>
               </a>
 
-              <a href="/commissions" className="group relative overflow-hidden rounded-xl transform hover:-translate-y-1 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300" style={{ aspectRatio: '1381/1080' }}>
+              <a href="/commissions" className="group relative overflow-hidden rounded-xl transform hover:translate-x-2 hover:rotate-2 hover:shadow-[0_0_30px_rgba(255,255,255,0.2)] transition-all duration-300 ease-out" style={{ aspectRatio: '1381/1080' }}>
                 <Image 
                   src="/images/commissions.png" 
                   alt="Commissions" 
