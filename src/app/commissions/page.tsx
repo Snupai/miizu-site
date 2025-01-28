@@ -16,7 +16,7 @@ export default function CommissionsPage() {
             <ul className="space-y-4 text-lg">
               <li>✦ Animations</li>
               <li>✦ Video Editing</li>
-              <li>✦ SFX</li>
+              <li>✦ Sound Design</li>
             </ul>
           </section>
 
