@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import ExternalContent from './ExternalContent';
 
 export type Video = {
   src: string;
@@ -21,27 +22,23 @@ export default function VideoGrid({ videos }: VideoGridProps) {
 
   const renderVideo = (video: Video, index: number) => (
     <div className={`flex flex-col ${video.fullWidth ? 'md:col-span-2' : ''}`} key={index}>
-      <div className="aspect-video rounded-xl overflow-hidden relative">
+      <div className="relative overflow-hidden rounded-xl">
         {!loadedVideos[index] && (
-          <div className="absolute inset-0 bg-gray-800 animate-pulse" />
+          <div className="absolute inset-0 animate-pulse bg-gray-800" />
         )}
-        <iframe 
-          title={`Video player ${index}`}
-          className="embed-content"
+        <ExternalContent
           src={video.src}
-          frameBorder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowFullScreen
-          style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%'}}
+          title={`Video player ${index}`}
+          type="video"
           onLoad={() => handleIframeLoad(index)}
         />
       </div>
-      <p className="text-white text-center text-sm mt-2">{video.title}</p>
+      <p className="mt-2 text-center text-sm text-white">{video.title}</p>
     </div>
   );
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-7xl mx-auto">
+    <div className="mx-auto grid max-w-7xl grid-cols-1 gap-6 md:grid-cols-2">
       {videos.map((video, index) => renderVideo(video, index))}
     </div>
   );
