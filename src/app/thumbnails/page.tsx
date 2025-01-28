@@ -6,42 +6,50 @@ const youtubeImages = [
   {
     src: "/thumbnails/own-youtube/VRCHAT_UNCENSORED.jpg",
     title: "Thumbnail for the VRCHAT UNCENSORED Trailer / Youtube: Miizumelon",
-    fullWidth: false
+    fullWidth: false,
+    subtext: true
   },
   {
     src: "/thumbnails/own-youtube/Index_controller_review.jpg", 
     title: "Thumbnail for my Index controller review / Youtube: Miizumelon",
-    fullWidth: false
+    fullWidth: false,
+    subtext: true
   },
   {
     src: "/thumbnails/own-youtube/Wie_ich_meine_Videos_mache.jpg",
     title: "Thumbnail for \"Wie ich meine Videos mache\" / Youtube: Miizumelon",
-    fullWidth: false
+    fullWidth: false,
+    subtext: true
   },
   {
     src: "/thumbnails/own-youtube/AI_Voice.jpg",
     title: "/ Youtube: Miizumelon",
-    fullWidth: false
+    fullWidth: false,
+    subtext: true
   },
   {
     src: "/thumbnails/own-youtube/HP_Reverb_G2_review.jpg",
     title: "Thumbnail for my HP Reverb G2 review / Youtube: Miizumelon",
-    fullWidth: false
+    fullWidth: false,
+    subtext: true
   },
   {
     src: "/thumbnails/own-youtube/Alles_ueber_VRCHAT.jpg",
     title: "/ Youtube: Miizumelon",
-    fullWidth: false
+    fullWidth: false,
+    subtext: true
   },
   {
     src: "/thumbnails/own-youtube/Das_teuerste_Spiel_der_Welt.jpg",
     title: "/ Youtube: Miizumelon",
-    fullWidth: false
+    fullWidth: false,
+    subtext: true
   },
   {
     src: "/thumbnails/own-youtube/Fühlen_in_VR.jpg",
     title: "/ Youtube: Miizumelon",
-    fullWidth: false
+    fullWidth: false,
+    subtext: true
   }
 ];
 
@@ -49,95 +57,110 @@ const commissionedImages = [
   {
     src: "/thumbnails/commissions/Thumbnail_for_JuriiK.jpg",
     title: "Thumbnail for JuriiK (GestiefelterCutter)",
-    fullWidth: true
+    fullWidth: true,
+    subtext: true
   }
 ];
 
 const minecraftImages = [
   {
     src: "/thumbnails/minecraft/Project_Alive.jpg",
-    title: "",
-    fullWidth: false
+    title: "Thumbnail for Project Alive",
+    fullWidth: false,
+    subtext: false
   },
   {
     src: "/thumbnails/minecraft/After_Humans.png",
-    title: "",
-    fullWidth: false
+    title: "Thumbnail for After Humans",
+    fullWidth: false,
+    subtext: false
   },
   {
     src: "/thumbnails/minecraft/After_Humans_1.png",
-    title: "",
-    fullWidth: false
+    title: "Thumbnail for After Humans",
+    fullWidth: false,
+    subtext: false
   },
   {
     src: "/thumbnails/minecraft/Melfix_BTS.png",
-    title: "",
-    fullWidth: false
+    title: "Thumbnail for Melfix BTS",
+    fullWidth: false,
+    subtext: false
   },
   {
     src: "/thumbnails/minecraft/miizu_star.png",
-    title: "",
-    fullWidth: false
+    title: "Thumbnail for Miizu Star",
+    fullWidth: false,
+    subtext: false
   },
   {
     src: "/thumbnails/minecraft/cursed.jpg",
-    title: "",
-    fullWidth: false
+    title: "Thumbnail for Cursed",
+    fullWidth: false,
+    subtext: false
   },
   {
     src: "/thumbnails/minecraft/Melfix_BTS_1.png",
-    title: "",
-    fullWidth: false
+    title: "Thumbnail for Melfix BTS",
+    fullWidth: false,
+    subtext: false
   }
 ];
 
 const minecraftCinemaWallpapers = [
   {
     src: "/images/minecraft-cinema/Alexando.png",
-    title: "",
+    title: "Wallpaper for Alexando",
     fullWidth: false,
-    portrait: true
+    portrait: true,
+    subtext: false
   },
   {
     src: "/images/minecraft-cinema/Imperishability.png",
-    title: "",
+    title: "Wallpaper for Imperishability",
     fullWidth: false,
-    portrait: true
+    portrait: true,
+    subtext: false
   },
   {
     src: "/images/minecraft-cinema/Lambrowo.png",
-    title: "",
+    title: "Wallpaper for Lambrowo",
     fullWidth: false,
-    portrait: true
+    portrait: true,
+    subtext: false
   },
   {
     src: "/images/minecraft-cinema/Levonex.png",
-    title: "",
+    title: "Wallpaper for Levonex",
     fullWidth: false,
-    portrait: true
+    portrait: true,
+    subtext: false
   },
   {
     src: "/images/minecraft-cinema/Miizumelon.png",
-    title: "",
+    title: "Wallpaper for Miizumelon",
     fullWidth: false,
-    portrait: true
+    portrait: true,
+    subtext: false
   },
   {
     src: "/images/minecraft-cinema/Nachtiuwu.png",
-    title: "",
+    title: "Wallpaper for Nachtiuwu",
     fullWidth: false,
-    portrait: true
+    portrait: true,
+    subtext: false
   },
   {
     src: "/images/minecraft-cinema/Raafii.png",
-    title: "",
+    title: "Wallpaper for Raafii",
     fullWidth: false,
-    portrait: true
+    portrait: true,
+    subtext: false
   }
 ];
 
 function ImageGrid({ images, images_per_row}: { 
-  images: { src: string; title: string; fullWidth: boolean; portrait?: boolean }[], 
+  images: { src: string; title: string; fullWidth: boolean; portrait?: boolean; subtext?: boolean }[], 
   images_per_row: number 
 }) {
   // Calculate items in the last row
@@ -180,7 +203,7 @@ function ImageGrid({ images, images_per_row}: {
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               />
             </div>
-            <p className="text-white text-center text-sm mt-2">{image.title}</p>
+            {image.subtext && <p className="text-white text-center text-sm mt-2">{image.title}</p>}
           </div>
         );
       })}
