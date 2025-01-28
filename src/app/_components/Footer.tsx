@@ -14,6 +14,7 @@ export default function Footer() {
             <span className="inline-block animate-pulse text-red-500">❤</span>
             {' '}by Miizu
           </p>
+          {/*
           <div className="flex items-center gap-4">
             <Link href="/privacy" className="hover:text-white">
               Privacy Policy
@@ -22,6 +23,7 @@ export default function Footer() {
               Imprint
             </Link>
           </div>
+          */}
         </div>
       </div>
     </footer>
