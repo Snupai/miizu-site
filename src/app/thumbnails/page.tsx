@@ -149,7 +149,7 @@ function ImageGrid({ images, images_per_row}: {
     2: 'md:grid-cols-2',
     3: 'md:grid-cols-3',
     4: 'md:grid-cols-4',
-  }[images_per_row] || 'md:grid-cols-1';
+  }[images_per_row] ?? 'md:grid-cols-1';
   
   return (
     <div className={`grid grid-cols-1 ${gridColsClass} gap-6 max-w-7xl mx-auto`}>
