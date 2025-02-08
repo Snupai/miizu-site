@@ -5,7 +5,7 @@ import SocialMediaLinks from "./_components/SocialMediaLinks"
 import AnimatedText from "./_components/AnimatedText"
 import Image from "next/image"
 import { motion, useScroll, useTransform } from "framer-motion"
-import { useRef, useEffect, useState } from "react"
+import { useRef } from "react"
 
 type Card = {
   href: string;
@@ -17,7 +17,6 @@ type Card = {
 export default function HomePage() {
   const containerRef = useRef<HTMLDivElement>(null)
   const { scrollY } = useScroll()
-  const [isMounted, setIsMounted] = useState(false)
 
   const cards: readonly {
     href: string;
@@ -55,10 +54,6 @@ export default function HomePage() {
   const videoScale = useTransform(scrollY, [0, 1000], [1, 1.1])
   const heroOpacity = useTransform(scrollY, [0, 300], [1, 0])
   const heroY = useTransform(scrollY, [0, 300], [0, 100])
-
-  useEffect(() => {
-    setIsMounted(true)
-  }, [])
 
   const scrollToNextSection = () => {
     const targetElement = document.getElementById("cards")
