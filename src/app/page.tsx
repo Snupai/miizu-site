@@ -254,8 +254,8 @@ export default function HomePage() {
                         }}
                       >
                         <Image
-                          src={card.src!}
-                          alt={card.alt!}
+                          src={card.src}
+                          alt={card.alt}
                           width={1381}
                           height={1080}
                           className="object-cover w-full h-full"
